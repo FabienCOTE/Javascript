@@ -1,3 +1,3 @@
-var hello = "Bonjour le monde !";
+var hello = "Bonjour le monde !"; //create a variable
 
-alert(hello);
+alert(hello); //alert window
