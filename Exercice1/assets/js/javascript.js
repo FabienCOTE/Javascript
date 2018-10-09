@@ -1,3 +1,5 @@
-var hello = "Bonjour le monde !"; //create a variable
+//Création d'une variable
+var hello = "Bonjour le monde !";
 
-alert(hello); //alert window
+//Fenêtre javascript avec la variable
+alert(hello);
