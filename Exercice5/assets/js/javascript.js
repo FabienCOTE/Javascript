@@ -7,14 +7,14 @@ function validation(event) {
   //Création des variables
   var firstNumber = document.getElementById('firstNumber').value;
   var secondNumber = document.getElementById('secondNumber').value;
-  var regexName = /^[0-9]+[,.][0-9]+$/;
+  var regexName = /^[\d]+[,.][\d]+$/;
 
   //Si une des deux variables a zéro caractère, on applique une alerte pour indiquer à l'utilisateur de recommencer
   if(firstNumber.length == 0 || secondNumber.length == 0) {
     alert("Veuillez recommencer, un ou plusieurs champs son vide");
   }
   //Sinon si la regex est valide pour les deux variables, on affiche la fenêtre avec ses informations
-  else if (regexName.test(firstNumber) == true && regexName.test(secondNumber) == true) {
+  else if (regexName.test(firstNumber) && regexName.test(secondNumber)) {
     //On remplace la virgule par un point pour effectuer l'opération
     secondNumber = secondNumber.replace(",",".");
     //On multiplie la partie entière du premier avec le deuxième nombre

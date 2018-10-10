@@ -14,12 +14,12 @@ function validation(event) {
     alert("Veuillez recommencer, un ou plusieurs champs son vide ou incorrect");
   }
   //Sinon si la regex est valide pour les deux variables, on effectue les différentes opérations pour afficher le résultat
-  else if (regexName.test(shoeSize) == true && regexName.test(yearOfBirth) == true) {
+  else if (regexName.test(shoeSize) && regexName.test(yearOfBirth)) {
     var result = shoeSize * 2;
-    var result = result + 5;
-    var result = result * 50;
-    var result = result - yearOfBirth;
-    var result = result + 1766;
+    result = result + 5;
+    result = result * 50;
+    result = result - yearOfBirth;
+    result = result + 1766;
     alert(result);
   }
   //Sinon on lui demande de recommencer car les champs ne sont pas valides

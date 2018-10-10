@@ -4,7 +4,7 @@ var valid = 0;
 //Création d'une condition, tant que la variable 'valid' n'est pas égal à 1 on repéte l'opération
 while(valid != 1) {
   //Création d'une variable Regex
-  var regexName = /^[a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸ]+([-'\s][a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸ]+)?$/;
+  var regexName = /^[a-zA-ZÀ-ÿ]+([-'\s][a-zA-ZÀ-ÿ]+)?$/;
   //Création d'une variable qui correspond à la valeur saisie dans la zone de texte
   var insertName = prompt("Saisir votre prénom");
   //Si on clique sur 'annuler' ou 'ok' sans rien inscrire dans la zone de texte, on applique cette condition
@@ -12,7 +12,7 @@ while(valid != 1) {
     alert("Erreur, veuillez recommencer");
   }
   //Sinon si les caractères correspondent au Regex, une fenêtre dit bonjour à la personne et on change la valeur de la variable 'valid' pour cloturer la boucle
-  else if (regexName.test(insertName) == true) {
+  else if (regexName.test(insertName)) {
     alert("Bonjour " + insertName);
     valid = 1;
   }
